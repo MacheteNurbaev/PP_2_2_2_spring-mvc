@@ -1,10 +1,6 @@
 package web.model;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-
 public class Car {
     private Integer id;
     private String model;
