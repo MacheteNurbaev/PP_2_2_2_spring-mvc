@@ -1,15 +1,15 @@
 package web.carDao;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import web.model.Car;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component
-public class CarDao implements Dao {
-    private List<Car> cars;
+@Repository
+public class CarDaoImpl implements Dao {
+    public List<Car> cars;
 
     {
         cars = new ArrayList<>();
@@ -27,7 +27,7 @@ public class CarDao implements Dao {
     }
 
     @Override
-    public List<Car> countCars(Integer count) {
+    public List<Car> getCarsByCount(Integer count) {
         return cars.stream().limit(count).collect(Collectors.toList());
     }
 
